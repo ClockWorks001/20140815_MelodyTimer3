@@ -7,7 +7,7 @@
 *************************************************/
 #define PWM_BUZZER_LIB
 
-#include  <htc.h>				// 標準ヘッダファイルのインクルード
+#include <xc.h>         // XC8 General Include File
 #include "vTimer1.h"
 #include "vBuzzer_pwm.h"
 #include "vSwitch_menu.h"
@@ -40,7 +40,7 @@ void vStopBuzzer(void)
 {
 	CCP1CON	= 0;			// CCP off
 	TMR2ON	= 0;			// TMR2 is off
-	GPIO2 	= 0;			// out put low
+	GPIObits.GP2 = 0;			// out put low
 }
 
 /*******************************

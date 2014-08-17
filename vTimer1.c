@@ -6,7 +6,7 @@
 *************************************************/
 #define TIMER1_LIB
 
-#include  <htc.h>				// 標準ヘッダファイルのインクルード
+#include <xc.h>         // XC8 General Include File
 #include "vTimer1.h"
 
 /*****************************
@@ -81,10 +81,10 @@ void vClock01()
 				}
 			}
 
-			cMinCountDown --;
-			if(cMinCountDown < 0) {
-				cMinCountDown  = 59;
-			}
+//			cMinCountDown --;
+//			if(cMinCountDown < 0) {
+//				cMinCountDown  = 59;
+//			}
 		}
 
 /*

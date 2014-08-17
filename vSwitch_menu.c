@@ -8,7 +8,7 @@
 *************************************************/
 #define SWITCH_MENU_LIB
 
-#include  <htc.h>				// 標準ヘッダファイルのインクルード
+#include <xc.h>         // XC8 General Include File
 #include "vSwitch_menu.h"
 #include "vTimer1.h"
 #include "vBuzzer_pwm.h"

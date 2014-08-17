@@ -1,0 +1,8 @@
+*~
+*.lnk
+*.ini
+*.d
+*.swp
+build/
+dist/
+degug/

@@ -8,9 +8,9 @@
 #if defined TIMER1_LIB
 	short sSecc = 0;			// 時間計測用
 	char cFlag10mSec = 0;		// 10msed時間計測用
-	char cFlagSec = 0;			// 1sec時間計測用
+	char cFlagSec = 0;		// 1sec時間計測用
 	unsigned char ucSec01, ucMin01, ucHour01;
-	char cMinCountDown;
+//	char cMinCountDown;
 
 #else
 	extern short sSecc;

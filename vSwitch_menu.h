@@ -9,13 +9,13 @@
 *************************************************/
 
 //pushbuttons define
-#define sw1				GPIO3
+#define sw1			GPIObits.GP3
 #define SWITCH_ON		1
 #define SWITCH_OFF		0
 
-#define LED3min			GPIO4	//Red
-#define LED5min			GPIO5	//Yelow
-#define LED10min		GPIO0	//Green
+#define LED3min			GPIObits.GP4	//Red
+#define LED5min			GPIObits.GP5	//Yelow
+#define LED10min		GPIObits.GP0	//Green
 
 #define d3min			3	//wait time
 #define d5min			5	//wait time

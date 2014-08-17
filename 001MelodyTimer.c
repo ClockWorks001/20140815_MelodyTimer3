@@ -1,17 +1,18 @@
 /************************************************
-* KitchTimer with Melody　
-*  HI-TECH Cを使用
-*  プロジェクト名:001 Melody Timer
+* MelodyTimer 3　
+*  MPLAB X IDE v2.15
+*  XC8 v1.32
 *************************************************/
-#include  <htc.h>				// 標準ヘッダファイルのインクルード
+#include <xc.h>         // XC8 General Include File
 
 #include "vTimer1.h"
 #include "vBuzzer_pwm.h"
 #include "vSwitch_menu.h"
 
-/***** コンフィギュレーションの設定 ********/
-__CONFIG(INTIO & WDTDIS & PWRTDIS & BORDIS & MCLRDIS
-		& UNPROTECT & IESODIS & FCMDIS);
+/***** CONFIG SETTINGS ********/
+#pragma config  FOSC = INTOSCIO, WDTE = OFF, PWRTE = OFF, MCLRE = OFF, CP = OFF, BOREN = OFF, IESO = OFF, FCMEN = OFF, CPD = OFF
+
+
 /*** グローバル変数の定義  ****/
 //#define	_XTAL_FREQ	2000000
 
@@ -48,7 +49,7 @@ void main(void)
 	OSCCON = 0x50;				// クロック2MHzに設定
 	ANSEL  = 0x00;				// すべてデジタルに設定
 	CMCON0 = 0x07;				// コンパレータ無効化
-	GPPU   = 1;					// プルアップ無効化
+	OPTION_REGbits.nGPPU   = 1;             // プルアップ無効化
 	WPU    = 0x0;				// プルアップビット指定
 	TRISIO = 0x08;				// GP3入力、他は出力設定
 	GPIO   = 0x00;				// 全てlow出力設定
